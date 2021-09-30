@@ -16,7 +16,7 @@ http://www.patreon.com/drludos
 
 **GB Corp. is an incremental / idle game for the Game Boy, that rewards you for playing it on several console models**.
 
-
+![gbcorp_gameplay](https://user-images.githubusercontent.com/42076899/135525540-b4eb3348-5e32-4480-a7b5-cb7b65ee458f.gif)
 
 The core gameplay is quite simple. You hire consoles from the Game Boy line *(Original GB, GB Pocket, GB Color and Super Game Boy)*, and they work for your "push-button" company. When you have earned enough money, you can **hire more employees**, and **upgrade the ones you have** so they bring back more income. Also, you must be careful of their power levels: **change the batteries of your employees** when they are empty!
 
