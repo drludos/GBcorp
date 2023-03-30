@@ -33,6 +33,8 @@ Get all **my other games**: http://drludos.itch.io/ \
 http://www.patreon.com/drludos
 ***
 
+#About the game
+
 **GB Corp. is an incremental / idle game for the Game Boy, that rewards you for playing it on several console models**.
 
 ![gbcorp_gameplay](https://user-images.githubusercontent.com/42076899/135525540-b4eb3348-5e32-4480-a7b5-cb7b65ee458f.gif)
