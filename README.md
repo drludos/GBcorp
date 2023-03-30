@@ -1,8 +1,7 @@
-# GB Corp.
+
+# ![itch_banner](https://user-images.githubusercontent.com/42076899/228966852-62abed44-af9a-42fa-8c95-790f069bf8dd.jpg) GB Corp.
 
 A Game Boy game first created for the [Game Boy Competition 2021](https://itch.io/jam/gbcompo21/). Then, it was latter enhanced, polished and extended to a full commercial release [available in physical format](https://yastuna-games.com/en/nintendo-game-boy/72-gb-corp.html) and as a [digital (ROM) version](https://drludos.itch.io/gb-corp).
-
-by **Dr. Ludos** *(2021-2023)*
 
 This is the source code, you can get a precompiled rom from here: \
 https://drludos.itch.io/gb-corp
@@ -12,20 +11,21 @@ https://drludos.itch.io/gb-corp
 To compile the game, you'll need to use [GBDK-2020 v4.0.6](https://github.com/gbdk-2020/gbdk-2020/releases/tag/4.0.6). (it might need some tweaking / update to the [GBT Player music library](https://github.com/AntonioND/gbt-player) to compile on v4.1.0 and later).
 
 Then, use the following commands:
-*Use GBDK2020 to compile the main game program*
+
+*Use GBDK2020 to compile the main game program* \
 lcc -Wa-l -Wl-m -Wl-j -c -o gbcorp.o gbcorp.c
 
-*Use GBDK2020 to compile the GBT Player output (C code from mod file)*
+*Use GBDK2020 to compile the GBT Player output (C code from mod file)* \
 lcc -Wa-l -Wl-m -Wl-j -c -o music.o music.c
 
-*Use GBDK2020 to assemble the GBT Player engine (ASM code)*
-sdasgb -plosgff -I"libc" -c -o gbt_player.o gbt_player.s
+*Use GBDK2020 to assemble the GBT Player engine (ASM code)* \
+sdasgb -plosgff -I"libc" -c -o gbt_player.o gbt_player.s \
 sdasgb -plosgff -I"libc" -c -o gbt_player_bank1.o gbt_player_bank1.s
 
-*And finally, assemble the ROM using GBDK2020 (set it as SGB compatible (-ys) and CGB compatible (-yc))*
+*And finally, assemble the ROM using GBDK2020 (set it as SGB compatible (-ys) and CGB compatible (-yc))* \
 lcc -Wl-yt0x1B -Wl-yo2 -Wl-ya1 -Wm-yn"GB-Corp" -Wm-ys -Wm-yc -o gbcorp.gb gbcorp.o music.o gbt_player.o gbt_player_bank1.o
 
-The code is heavily commented to help you making your own GB games too, so feel free to contact me if you have any question about it. The 2P Player link mode was designed programmed by the talented [bbbbbr](https://github.com/bbbbbr/GBcorp).
+The code is **heavily commented to help you making your own GB games**, and feel free to contact me if you have any question about it. The **2P Player link mode was designed programmed by the talented [bbbbbr](https://github.com/bbbbbr/GBcorp)**.
 
 ***
 Get all **my other games**: http://drludos.itch.io/ \
@@ -33,7 +33,7 @@ Get all **my other games**: http://drludos.itch.io/ \
 http://www.patreon.com/drludos
 ***
 
-#About the game
+# About the game
 
 **GB Corp. is an incremental / idle game for the Game Boy, that rewards you for playing it on several console models**.
 
@@ -59,7 +59,7 @@ The game controls are quite simple :
 
 **SELECT:** fire an employee (warning, it costs money too!)
 
-**START:** hold the button for 3 seconds to reset the SAVE (warning, all game progress will be lost forever!)
+**START:** START: pause menu (check goals, reset save, etc.)
 
 Each time you upgrade the level of an employee, or hire / fire someone, the cost of these actions increase. However, the more experienced your employees are, the more money they bring! For more precise numbers, each active employee will generate twice its recharge cost *(the $number in bracket after the current power level)* per second.
 
@@ -83,8 +83,6 @@ This game is programmed 100% in C with the wonderful GBDK-2020: https://github.c
 
 If you want to try your hand at making Game Boy games, I'm releasing this one as open-source with heavily commented source code. If you have any question about the source code, feel free to contact me!
 
-This game was created from scratch for the [Game Boy Competition 2021](https://itch.io/jam/gbcompo21/rate/1212484): you'll find a lot of cool new GB games to play here!
-
-At first, this game was created from scratch for the [Game Boy Competition 2021](https://itch.io/jam/gbcompo21/rate/1212484): you'll find a lot of cool new GB games to play here! Then, after the competition, I spent several months to polish and enhance the game, resulting in the final version that you can [buy on itch.io](https://drludos.itch.io/gb-corp). If you want to play the version of the game submitted to the competition, it's still available here as a freeware "prototype/demo" download *(original source code of the prototype is included too, it's the Release 1)*.
+At first, this game was created from scratch for the [Game Boy Competition 2021](https://itch.io/jam/gbcompo21/rate/1212484): you'll find a lot of cool new GB games to play here! Then, after the competition, I spent several months to polish and enhance the game, resulting in the final version that you can [buy on itch.io](https://drludos.itch.io/gb-corp) and whose source code is available in this repo. If you want to play the version of the game submitted to the competition, it's still available here too as a freeware "prototype/demo" download *(original source code of the prototype is included too, it's the Release 1)*.
 
 Enjoy!
